@@ -1,0 +1,44 @@
+header{
+   background-color:cornflowerblue;
+   margin:5px;
+   padding: 45px;
+   font-weight:bolder;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   border-radius:5px;
+   color:whitesmoke;
+}
+
+section{
+    background-color: lightgray;
+    margin:15px;
+    border-radius:5px;
+}
+
+body{
+    background-color: gray;
+    margin:10px;
+}
+
+section > div{
+    padding: 5px;
+}
+
+table, thead, tbody, th, tr, td{
+     border:1px solid;
+     text-align: center;
+ }
+
+#tbl{
+    margin: 50px 10px;
+     
+ }
+
+ #btn{
+     margin:8px;
+ }
+
+ ol{
+     margin:10px;
+ }
+
+
