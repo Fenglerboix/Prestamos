@@ -118,17 +118,16 @@
      
      
      
-      if($ValorPrestamo < 2000000 && $TipoPrestamo == "Libre Inversion" || $ValorPrestamo>100000000  && $TipoPrestamo == "Libre Inversion"){ 
-        echo '<script>alert("Mistake")</script>';               
-        //echo '<script>Error("'.$Cliente.'","'.$TipoPrestamo.'");</script>';
+      if($ValorPrestamo < 2000000 && $TipoPrestamo == "Libre Inversion" || $ValorPrestamo>100000000  && $TipoPrestamo == "Libre Inversion"){                    
+          echo '<script>Error("'.$Cliente.'","'.$TipoPrestamo.'");</script>';
       }else if($ValorPrestamo>50000000 && $ValorPrestamo<= 100000000 && $TipoPrestamo == "Libre Inversion"){
                $TasaInteres = $ValorPrestamo*0.0145;
                $interes = 0.0145;
                  if($Ingresos>(SALARIOMINIMO*4) && $PersonasCarg<4 && $PlazoMax<=15){                     
-                  print '<script>swal("Señor(a) '.$Cliente.' \nsu prestamo fue aprobado");</script>';
+                   print '<script>swal("¡Bien!","Señor(a) '.$Cliente.' \nsu prestamo fue aprobado","success");</script>';
                   $CuotaFija = (0.0145*$ValorPrestamo)/(1-(1+0.0145)**(-$meses));
                  }else{                      
-                       print '<script>swal("Señor(a) '.$Cliente.'\nsu prestamo no fue aprobado\n lo sentimos tenga en cuenta que el plazo minimo \npara prestamos de libre inversion son de 15 años");</script>';
+                       echo '<script>Error("'.$Cliente.'","'.$TipoPrestamo.'");</script>';
                     }  
 
            }else if($ValorPrestamo<=50000000 && $TipoPrestamo == "Libre Inversion"){
@@ -151,7 +150,7 @@
                $interes = 0.0135;
                  if($Ingresos>(SALARIOMINIMO*4) && $PersonasCarg>=$ValorPrestamo && $PlazoMax<=15){
                      $CuotaFija = (0.0135*$ValorPrestamo)/(1-(1+0.0135)**(-$meses));
-                  print '<script>swal("Señor(a) '.$Cliente.' \nsu prestamo fue aprobado");</script>';
+                  print '<script>swal("¡Bien!","Señor(a) '.$Cliente.' \nsu prestamo fue aprobado","success");</script>';
                  }else{
                        echo '<script>Error("'.$Cliente.'","'.$TipoPrestamo.'");</script>';
                     }             
@@ -160,7 +159,7 @@
               $interes = 0.0115;
                   if($Ingresos>(SALARIOMINIMO*4) && $PersonasCarg>=$ValorPrestamo && $PlazoMax<=15){
                       $CuotaFija = (0.0115*$ValorPrestamo)/(1-(1+0.0115)**(-$meses));
-                  print '<script>swal("Señor(a) '.$Cliente.' \nsu prestamo fue aprobado");</script>';
+                   print '<script>swal("¡Bien!","Señor(a) '.$Cliente.' \nsu prestamo fue aprobado","success");</script>';
                   }else{
                         echo '<script>Error("'.$Cliente.'","'.$TipoPrestamo.'");</script>';
                     }               
